@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #0e100f;
+  width: 100vw;
+  height: 100vh;
+}
+
+#header {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.2rem; /* 160% */
+}
+
+.title img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 99rem;
+}
+
+.notification {
+  display: flex;
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: 2.4rem;
+  border: 0.1rem solid #f1f3f3;
+
+  font-size: 2.4rem;
+  color: #7e8491;
+}
+
+#days {
+  display: flex;
+  width: 100%;
+  padding: 0.4rem 2rem 0rem 2rem;
+  align-items: flex-start;
+
+  border-bottom: 0.1rem solid #f1f3f3;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  flex: 1 0 0;
+
+  border-radius: 1.2rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  align-self: stretch;
+
+  color: #c0c3c9;
+}
+
+.details .number {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.2rem; /* 177.778% */
+  letter-spacing: -0.036rem;
+}
+
+.details .day-name {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 160% */
+}
+
+.details.coming {
+  color: #0e100f;
+}
+
+.details.today {
+  color: #00a86b;
+}
+
+.details.today::after {
+  content: "";
+  height: 0.2rem;
+  align-self: stretch;
+  margin-top: 1.2rem;
+
+  border-radius: 0.2rem 0.2rem 0rem 0rem;
+  background: #00a86b;
+}
+
+#tasks {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.to-do {
+  display: flex;
+  padding: 0rem 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  border-bottom: 0.1rem solid #f1f3f3;
+}
+
+.to-do_title {
+  color: #7e8491;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 160% */
+}
+
+.to-do_task {
+  display: flex;
+  height: 4.8rem;
+  align-items: center;
+  gap: 1.2rem;
+  align-self: stretch;
+  padding: 1.2rem 0;
+
+  border-bottom: 0.1rem solid #f1f3f3;
+}
+
+.checkbox-task {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  border-radius: 0.6rem;
+  background: #f4f6f6;
+}
+
+label {
+  color: #0e100f;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem; /* 142.857% */
+  flex: 1 0 0;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.category-color {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #00a86b;
+  position: relative;
+  display: inline-block;
+  border-radius: 0.2rem;
+}
+
+.category-name {
+  color: #7e8491;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 160% */
+}
+
+#app-bar {
+  display: flex;
+  width: 100%;
+  height: 8.8rem;
+  padding: 0rem 1.6rem 0rem 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-top: 0.1rem solid #f1f3f3;
+  background: #fff;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 2.4rem;
+
+  color: #7e8491;
+}
+
+.iconsax.menu {
+  display: flex;
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconsax.search {
+  display: flex;
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.fab {
+  display: flex;
+  width: 5.6rem;
+  height: 5.6rem;
+  padding: 1.6rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  font-size: 2.4rem;
+  color: #fff;
+
+  border-radius: 1.4rem;
+  background: #00a86b;
+}
